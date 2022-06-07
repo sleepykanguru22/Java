@@ -14,10 +14,19 @@ public class CafeUtil {
        double prices[] = {5.99, 7.89, 10.50, 11.99, 14.99};
        int i;
        for (i = 0; i <=prices.length; i++){
-           total += i
+           total += i;
        }
        return total;
    }
+
+   public void displayMenu(ArrayList<String> menuItems){
+       String menuItems[]={ "drip coffee",  "cappuccino", "latte" ,"mocha"
+   }
+        int i;
+        for(i=0; i<menuItems.length;i++){
+        String name = menuItems.get(i);
+        return System.out.println(name);
+    }
 
 }
 
