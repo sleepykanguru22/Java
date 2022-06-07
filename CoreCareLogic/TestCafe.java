@@ -8,7 +8,7 @@ public class TestCafe {
       of the CafeUtil class. 
       Hint: it will need to correspond with the variable name used below..
     */
-    	
+    	CafeUtil appTest= new CafeUtil();
         /* ============ App Test Cases ============= */
     
         System.out.println("\n----- Streak Goal Test -----");
