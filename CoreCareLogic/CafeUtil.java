@@ -27,7 +27,10 @@ public class CafeUtil {
         String name = menuItems.get(i);
         return System.out.println(name);
     }
-
+    
+    public addCustomer(ArrayList<String> customers){
+        
+    }
 }
 
   
