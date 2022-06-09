@@ -2,8 +2,9 @@ package com.jasmincarter.zookeeper;
 
 class Bat extends Mammal {
 	public Bat(){
+		super();
 		this.energyLevel = 300;
-		super.displayEnergy();
+		
 	}
 	public void fly() {
 		energyLevel -=50;
