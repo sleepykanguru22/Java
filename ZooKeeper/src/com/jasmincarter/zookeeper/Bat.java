@@ -1,7 +1,7 @@
 package com.jasmincarter.zookeeper;
 
 class Bat extends Mammal {
-	public Bat{
+	public Bat(){
 		this.energyLevel = 300;
 		super.displayEnergy();
 	}
