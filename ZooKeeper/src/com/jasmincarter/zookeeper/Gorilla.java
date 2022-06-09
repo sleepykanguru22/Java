@@ -1,24 +1,19 @@
 package com.jasmincarter.zookeeper;
 
-import java.util.Set;
+public class Gorilla extends Mammal  {
 
-public class Gorilla {
+	public void throwSomething(){
+		energyLevel -= 5;
+		System.out.println("The Gorilla has thrown something " + displayEnergy());
 
-	public Gorilla() {
-		super();
-		// TODO Auto-generated constructor stub
 	}
-	public throwSomething(){
-		set.energyLevel - 5;
-		System.out.println("The Gorilla has thrown something");
+	public void eatBananas() {
+		energyLevel += 10;
+		System.out.println("The Gorilla is happy " + displayEnergy());
 	}
-	public eatBananas() {
-		Set.energyLevel + 10;
-		System.out.println("The Gorilla is happy");
-	}
-	public climb() {
-		set.energyLevel - 10;
-		System.out.println("The Gorilla climbed a tree");
+	public void climb() {
+		energyLevel -= 10;
+		System.out.println("The Gorilla climbed a tree " + displayEnergy());
 	}
 	
 	
