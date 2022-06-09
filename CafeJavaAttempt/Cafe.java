@@ -28,6 +28,6 @@ public class Cafe {
         // Example:
         System.out.println(generalGreeting + customer1);
         System.out.println(customer1 + pendingMessage);
-        System.out.println(customer4)
+        System.out.println(customer4);
     	// ** Your customer interaction print statements will go here ** //
     }}
