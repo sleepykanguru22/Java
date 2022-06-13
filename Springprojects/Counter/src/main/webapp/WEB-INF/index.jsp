@@ -12,7 +12,11 @@
 <body>
 <div class="container mt-5">
 <h1>Welcome User!</h1>
-<a href="/counter">Counter</a></div>
+<p><a href="/counter">Counter</a></p>
+<p><a href="/double-counter/">Add 2 visits</a></p>
+<p><a href="/reset-counter/">reset</a></p>
+</div>
+
 
 </body>
 </html>

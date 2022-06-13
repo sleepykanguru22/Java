@@ -1,5 +1,6 @@
 package com.codingdojo.counter.controllers;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -23,5 +24,23 @@ public String showCounter(HttpSession session, Model model) {
 	session.setAttribute("count",currentCount+1 );
 	return "showcounter.jsp";
 	}
+@RequestMapping("/double-counter/")
+public String doubleCounter(HttpSession session, Model model) {
+	Integer currentCount = (Integer) session.getAttribute("count");
+	model.addAttribute("countToShow", currentCount);
+	
+	session.setAttribute("count",currentCount+2 );
+	
+
+    return "doublecounter.jsp";
+}
+
+@RequestMapping("/reset-counter/")
+public String resetCounter(HttpSession session, Model model, HttpServletRequest request) {
+	
+	session.setAttribute("count", 0);
+
+	return "redirect:/counter/";
+}
 }
 	
