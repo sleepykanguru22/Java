@@ -27,7 +27,7 @@ public String showCounter(HttpSession session, Model model) {
 @RequestMapping("/double-counter/")
 public String doubleCounter(HttpSession session, Model model) {
 	Integer currentCount = (Integer) session.getAttribute("count");
-	model.addAttribute("countToShow", currentCount);
+	model.addAttribute("doubled", currentCount);
 	
 	session.setAttribute("count",currentCount+2 );
 	
