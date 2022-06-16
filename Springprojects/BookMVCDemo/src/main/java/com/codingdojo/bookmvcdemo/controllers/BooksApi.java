@@ -13,7 +13,9 @@ import com.codingdojo.bookmvcdemo.services.BookService;
 
 @RestController
 public class BooksApi {
-    private final BookService bookService;
+    private BookService bookService;
+	
+         
     public BooksApi(BookService bookService){
         this.bookService = bookService;
     }
@@ -34,16 +36,25 @@ public class BooksApi {
         return book;
     }
     //update & delete
+   
+    
     @RequestMapping(value="/api/books/{id}", method=RequestMethod.PUT)
     public Book update(
     		@PathVariable("id") Long id, 
     		@RequestParam(value="title") String title, 
-    		@RequestParam(value="description") String desc, 
+    		@RequestParam(value="description") String description, 
     		@RequestParam(value="language") String lang,
     		@RequestParam(value="pages") Integer numOfPages) {
-        Book book = bookService.updateBook(id, title, desc, lang, numOfPages);
+    	
+    	
+    	Book book = new Book(title, description, lang, numOfPages);
+    	book.setId(id);
+    	
+		book = bookService.updateBook(book);
+        
         return book;
     }
+	
     
     @RequestMapping(value="/api/books/{id}", method=RequestMethod.DELETE)
     public void destroy(@PathVariable("id") Long id) {
