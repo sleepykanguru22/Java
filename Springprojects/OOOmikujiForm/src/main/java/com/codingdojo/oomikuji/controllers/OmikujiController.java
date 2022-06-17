@@ -4,6 +4,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -15,7 +16,7 @@ public String index() {
 		
 	return "index.jsp";
 	}
-	@RequestMapping("/form")
+	@PostMapping("/show")
 	public String form(@RequestParam(value="num") String num,
 			@RequestParam(value="city") String city,
 			@RequestParam(value="realPerson") String realPerson,
@@ -41,12 +42,12 @@ public String index() {
 	}
 	@RequestMapping("/show")
 	public String show(HttpSession session, Model model ) {
-		model.addAttribute("num", session.getAttribute("num"));
-		model.addAttribute("city", session.getAttribute("city"));
-		model.addAttribute("realPerson", session.getAttribute("realPerson"));
-		model.addAttribute("activity", session.getAttribute("activity"));
-		model.addAttribute("organism", session.getAttribute("organism"));
-		model.addAttribute("comment", session.getAttribute("comment"));
+//		model.addAttribute("num", session.getAttribute("num"));
+//		model.addAttribute("city", session.getAttribute("city"));
+//		model.addAttribute("realPerson", session.getAttribute("realPerson"));
+//		model.addAttribute("activity", session.getAttribute("activity"));
+//		model.addAttribute("organism", session.getAttribute("organism"));
+//		model.addAttribute("comment", session.getAttribute("comment"));
 		return "results.jsp";
 		}
 }

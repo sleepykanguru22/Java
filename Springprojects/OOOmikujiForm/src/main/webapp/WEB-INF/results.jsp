@@ -18,6 +18,6 @@
 			</p>
 		</div>
 </div>
- <a href="/omikuji/form">Home</a>
+ <a href="/omikuji/home">Home</a>
 </body>
 </html>
