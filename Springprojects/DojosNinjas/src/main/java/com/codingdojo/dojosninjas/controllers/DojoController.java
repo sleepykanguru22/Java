@@ -10,9 +10,12 @@ import com.codingdojo.dojosninjas.services.DojoService;
 @Controller
 public class DojoController {
 
-	@Autowired
-	private DojoService dojoSerivice = new DojoService;
-		
+	
+	public class dojoApi {
+	    private final DojoService dojoService;
+	    public void dojosApi(DojoService dojoService){
+	        this.dojoService = dojoService;
+	    }	
 		
 	@GetMapping("/")
 	public String Index() {
